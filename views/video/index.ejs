@@ -1,0 +1,21 @@
+<% include ../partials/header %> 
+
+<div class="container">
+	<div class="row text-center">
+        <% series.forEach(function(serum){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= serum.thumbnail %>">
+                    <div class="caption">
+                        <h4><%= serum.title %></h4>
+                    </div>
+                    <p>
+                        <a href="/videos/series/<%= serum._id %>" class="btn btn-primary">More Info</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %> 

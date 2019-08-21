@@ -1,0 +1,19 @@
+% include ../partials/header %>
+
+<div class="container">
+	<div class="row text-center">
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= movie.thumbnail %>">
+                    <div class="caption">
+                        <h4><%= movie.name %></h4>
+                    </div>
+                    <p>
+                    	<a href="/movies/<%= video._id %>">Watch Episode</a>
+                    </p>
+                </div>
+            </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

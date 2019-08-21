@@ -1,0 +1,21 @@
+<% include ../partials/header %> 
+
+<div class="container">
+	<div class="row text-center">
+        <% movies.forEach(function(movie){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= movie.thumbnail %>" alt="Could not load image">
+                    <div class="caption">
+                        <h4><%= movie.name %></h4>
+                    </div>
+                    <p>
+                        <a href="/movies/<%= movie._id %>" class="btn btn-primary">Watch Movie</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %> 

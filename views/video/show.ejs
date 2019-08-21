@@ -1,0 +1,13 @@
+<% include ../partials/header %>
+
+<div class="container">
+	<div class="row">
+
+		<video width="1280" height="720" controls>
+			<source src="http://localhost:3000/video/<%= video._id %>" type="video/mp4">
+			Your browser does not support this format
+		</video>
+	</div>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+
+<div class="container">
+	<div class="row text-center">
+        <% series.videos.forEach(function(video){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= video.thumbnail %>">
+                    <div class="caption">
+                        <h4><%= video.name %></h4>
+                    </div>
+                    <p>
+                    	<a href="/videos/<%= video._id %>">Watch Episode</a>
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+        <p>
+            <a href="/videos/series/<%= series._id %>/episode/new">Add Episode</a>
+        </p>
+    </div>
+</div>
+
+<% include ../partials/footer %>
